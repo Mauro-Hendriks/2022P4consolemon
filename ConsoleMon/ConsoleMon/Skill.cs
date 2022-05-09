@@ -12,5 +12,11 @@ namespace ConsoleMon
         string name = "thunder bolt";
         int damage = 2;
         int EnergyCost = 30;
+
+        internal void UseOn(ConsoleMon caster, ConsoleMon target)
+        {
+            caster.DepleteEnergy(EnergyCost);
+            target.TakeDamage(damage);
+        }
     }
 }
