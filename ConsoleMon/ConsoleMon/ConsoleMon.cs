@@ -8,19 +8,19 @@ namespace ConsoleMon
 {
     class ConsoleMon
     {
-        string name = "Pickachu"; 
-        int health = 10;
-        int energy = 200;
-
-        internal void  TakeDamage()
+        public string name = "Pickachu"; 
+        public int health = 10;
+        public int energy = 200;
+      
+         internal void  TakeDamage(int damage)
         {
-            int damage = 2;
+            
             int Health = health - damage;
         }
 
-        internal void DepleteEnergy()
+        internal void DepleteEnergy(int Energy)
         {
-            int Energy = 30;
+            
             int bEnergy = energy - Energy;
         }
     }
