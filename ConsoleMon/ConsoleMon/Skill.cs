@@ -13,6 +13,7 @@ namespace ConsoleMon
         int damage = 2;
         int EnergyCost = 30;
 
+        List<string> skills = new List<string>();
         internal void UseOn(ConsoleMon caster, ConsoleMon target)
         {
             caster.DepleteEnergy(EnergyCost);

@@ -11,17 +11,26 @@ namespace ConsoleMon
         public string name = "Pickachu"; 
         public int health = 10;
         public int energy = 200;
-      
-         internal void  TakeDamage(int damage)
+        List<Skill> skills = new List<Skill>();
+        internal void  TakeDamage(int damage)
         {
             
-            int Health = health - damage;
+            this.health = health - damage;
+            
         }
 
-        internal void DepleteEnergy(int Energy)
+        internal void DepleteEnergy(int energy)
         {
             
-            int bEnergy = energy - Energy;
+            this.energy = this.energy - energy;
         }
+
+        internal void skill()
+        {
+
+        }
+        
+
+        
     }
 }
