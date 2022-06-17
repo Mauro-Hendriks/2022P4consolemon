@@ -9,15 +9,30 @@ namespace ConsoleMon
 
     class Skill
     {
-        string name = "thunder bolt";
+        string moveName = "thunder bolt";
         int damage = 2;
         int EnergyCost = 30;
+        Elementen element;
 
-        List<string> skills = new List<string>();
+        
         internal void UseOn(ConsoleMon caster, ConsoleMon target)
         {
             caster.DepleteEnergy(EnergyCost);
             target.TakeDamage(damage);
+        }
+        internal Skill()
+        {
+
+        }
+
+        internal Skill(Skill copyFrom)
+        {
+           
+            this.damage = copyFrom.damage;
+            this.EnergyCost = copyFrom.EnergyCost;
+            this.moveName = copyFrom.moveName;
+
+           
         }
     }
 }
