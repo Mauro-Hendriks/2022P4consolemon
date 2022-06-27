@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleMon
 {
-    public enum Elementen {dark,light,phychic,fighting}
+    public enum Elementen { Fire, Elec, Dark, Water , Physical }
     class ConsoleMon
     {
-        public string name = "Pickachu"; 
+        public string name = "Pickachu";
         public int health = 10;
         public int energy = 200;
-        Elementen weakness;
-        List<Skill> skills = new List<Skill>();
-        internal void  TakeDamage(int damage)
+        public Elementen weakness;
+        public List<Skill> skills = new List<Skill>();
+        public string monsterType;
+        internal void TakeDamage(int damage)
         {
-            
+
             this.health = health - damage;
-            
+
         }
 
         internal void DepleteEnergy(int energy)
         {
-            
+
             this.energy = this.energy - energy;
         }
 
-        internal void skill()
+        internal void Skill()
         {
 
         }
@@ -45,11 +45,12 @@ namespace ConsoleMon
 
             foreach (Skill skill in copyFrom.skills)
             {
-                Skill copy = new Skill(skill);
-                this.skills.Add(copy);
+                Skill clone = new Skill(skill);
+                this.skills.Add(clone);
 
             }
         }
 
     }
+
 }

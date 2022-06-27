@@ -9,10 +9,10 @@ namespace ConsoleMon
 
     class Skill
     {
-        string moveName = "thunder bolt";
-        int damage = 2;
-        int EnergyCost = 30;
-        Elementen element;
+        public string moveName = "thunder bolt";
+        public int damage = 2;
+        public int EnergyCost = 30;
+        public Elementen element;
 
         
         internal void UseOn(ConsoleMon caster, ConsoleMon target)
@@ -31,8 +31,6 @@ namespace ConsoleMon
             this.damage = copyFrom.damage;
             this.EnergyCost = copyFrom.EnergyCost;
             this.moveName = copyFrom.moveName;
-
-           
         }
     }
 }
